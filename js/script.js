@@ -10,11 +10,20 @@ const personalMovieDB = {
     private: false
 };
 
-for (let i = 1; i < 3; i++) {
-    const lastFilm1 = prompt('Один из последних просмотренных фильмов?', ''),
-        scoreOfLastFilm1 = prompt('На сколько его оцените?', '');
-        personalMovieDB.movies[lastFilm1] = scoreOfLastFilm1;
+for (let i = 0; i < 2; i++) {
+    const a = prompt('Один из последних просмотренных фильмов?', ''),
+        b = prompt('На сколько его оцените?', '');
+
+    if (a != '' && b != '' && a.length < 50 && a != null && b != null) {
+        personalMovieDB.movies[a] = b;
+        console.log('done');
+
+    } else {
+        console.log('error');
+        i--;
+    }
 }
+
 
 
 console.log(personalMovieDB);
