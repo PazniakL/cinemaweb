@@ -1,6 +1,8 @@
 const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
 console.log(numberOfFilms);
 
+
+
 const personalMovieDB = {
 
     count: numberOfFilms,
@@ -24,6 +26,19 @@ for (let i = 0; i < 2; i++) {
     }
 }
 
+if (personalMovieDB.count < 10) {
+    console.log('Вы посмотрели довольно мало фильмов');
 
+
+
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+    console.log('Вы классический зритель');
+
+} else if (personalMovieDB.count >= 30) {
+    console.log('Вы киноман');
+
+} else {
+    console.log('Произошла ошибка');
+}
 
 console.log(personalMovieDB);
