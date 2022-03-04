@@ -55,6 +55,14 @@ const personalMovieDB = {
             personalMovieDB.genres[i] = prompt(`Ваш любимый жанр под номером ${i + 1}`);
         }
     },
+    toggleVisibleMyDB: function() {
+        if(personalMovieDB.private) {
+            personalMovieDB.private = false;
+        } else {
+            personalMovieDB.private = true;
+        }
+
+    },
     showMyDB: function (hidden) {
         if (!hidden) {
             console.log(personalMovieDB);
@@ -70,4 +78,5 @@ personalMovieDB.start();
 personalMovieDB.rememberMyFilms();
 personalMovieDB.detectPersonalLevel();
 personalMovieDB.writeYourGenres();
+personalMovieDB.toggleVisibleMyDB();
 personalMovieDB.showMyDB(personalMovieDB.private);
